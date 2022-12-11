@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      {
+        // array loop
+        const array = ['Robby', 'Tamara', 'Gifary'];
+
+        array.forEach(function (value, index) {
+          console.info(`${index} : ${value}`);
+        });
+
+        array.forEach((value, index) => console.info(`${index} : ${value}`));
+
+        array.forEach((value) => console.info(value));
+      }
+
+      {
+        // array queue
+
+        const queue = [];
+
+        queue.push('Robby');
+        queue.push('Tamara');
+        queue.push('Gifary');
+
+        console.info(queue.shift()); // outputnya: Robby
+        console.info(queue.shift()); // outputnya: Tamara
+        console.info(queue.shift()); // outputnya: Gifary
+        console.info(queue.shift()); // outputnya: undifined
+      }
+
+      {
+        // array stack
+
+        const stack = [];
+
+        stack.push('Robby');
+        stack.push('Tamara');
+        stack.push('Gifary');
+
+        console.info(stack.pop()); // outputnya: Gifary
+        console.info(stack.pop()); // outputnya: Tamara
+        console.info(stack.pop()); // outputnya: Robby
+        console.info(stack.pop()); // outputnya: undifined
+      }
+
+      {
+        // array search
+
+        const source = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+
+        console.info(source.find((value) => value > 3)); // outputnya: 4
+        console.info(source.findIndex((value) => value > 3)); // outputnya: 3
+        console.info(source.includes(7)); // outputnya: false
+        console.info(source.indexOf(5)); // outputnya: 4
+        console.info(source.lastIndexOf(5)); // outputnya: 9
+      }
+
+      {
+        // array filter
+
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const ganjil = numbers.filter((value) => value % 2 === 1);
+        const genap = numbers.filter((value) => value % 2 === 0);
+
+        console.info(numbers); // outputnya: (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        console.info(ganjil); // outputnya: (5) [1, 3, 5, 7, 9]
+        console.info(genap); // outputnya: (5) [2, 4, 6, 8, 10]
+      }
+
+      {
+        // array transform
+
+        const names = ['Robby', 'Tamara', 'Gifary'];
+        namesUpper = names.map((value) => value.toUpperCase());
+        console.info(namesUpper); // outputnya: (3) ['ROBBY', 'TAMARA', 'GIFARY']
+
+        const namesReduce = names.reduce((before, value) => before + ' ' + value);
+        console.log(namesReduce); // outputnya: Robby Tamara Gifary
+
+        const namesReduceRight = names.reduceRight((before, value) => before + ' ' + value);
+        console.log(namesReduceRight); // outputnya: Gifary Tamara Robby
+
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const total = numbers.reduce((before, value) => before + value);
+        console.log(total); // outputnya: 55
+      }
+    </script>
+  </body>
+</html>

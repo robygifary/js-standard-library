@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date</title>
+  </head>
+  <body>
+    <script>
+      // membuat object date
+
+      const date1 = new Date();
+      console.info(date1); // outputnya: Fri Dec 09 2022 16:30:03 GMT+0700 (Western Indonesia Time) // waktu saat ini
+
+      const date2 = new Date(2022, 10, 10);
+      console.info(date2); // outputnya: Thu Nov 10 2022 00:00:00 GMT+0700 (Western Indonesia Time)
+
+      const date3 = new Date(2022, 10, 10, 1, 0, 0, 0);
+      console.info(date3); // outputnya: Thu Nov 10 2022 01:00:00 GMT+0700 (Western Indonesia Time) // membuat date samapi millis seconds
+
+      // unix timestamp
+
+      const timestamp = Date.now();
+      console.info(timestamp); // outputnya: 1670578795694 // unix epoch time
+
+      const dateUnix = new Date(timestamp);
+      console.info(dateUnix); // outputnya: Fri Dec 09 2022 16:42:05 GMT+0700 (Western Indonesia Time) // waktu saat ini
+
+      console.info(dateUnix.getTime()); // outputnya: 1670579019780
+
+      // parsing date
+
+      const parseTimesStamp = Date.parse('2020-12-18T10:10:10.123+07:00');
+      console.info(parseTimesStamp); // outputnya: 1608261010123
+
+      const parseDate = new Date(parseTimesStamp);
+      console.info(parseDate); // outputnya: Fri Dec 18 2020 10:10:10 GMT+0700 (Western Indonesia Time)
+
+      // Date Getter & Setter
+
+      const date = new Date();
+      date.setFullYear(2022);
+
+      console.info(date.getFullYear()); // outputnya: 2022 tahun
+      console.info(date.getMonth()); // outputnya: 11 bulan
+      console.info(date.getDate()); // outputnya: 9 tanggal
+      console.info(date.getHours()); // outputnya: 17 jam
+      console.info(date.getMinutes()); // outputnya: 1 menit
+      console.info(date.getSeconds()); // outputnya: 47 detik
+      console.info(date.getMilliseconds()); // outputnya: 200 milisecond
+      console.info(date.getTimezoneOffset()); // outputnya: -420 Time Zone
+
+      // Math
+
+      const angka1 = [Math.max(1, 2, 3, 4, 5, 6, 7)];
+      console.info(angka1); // outputnya: 7 // cara mengambil angka terbesar dalam array
+
+      const angka2 = [Math.min(1, 2, 3, 4, 5, 6, 7)];
+      console.info(angka2); // outputnya: 1 // cara mengambil angka terkecil dalam array
+
+      const angka3 = [Math.round(10.5)];
+      console.info(angka3); // outputnya: 11 // cara mengambil dan membulatkan angka
+
+      const angka4 = [Math.round(10.3)];
+      console.info(angka4); // outputnya: 10 // cara mengambil dan membulatkan angka
+
+      const angka5 = [Math.floor(10.8)];
+      console.info(angka5); // outputnya: 10 // cara mengambil dan membulatkan angka
+
+      // Boolean
+
+      const boolean = Boolean(true);
+      console.info(boolean); // outputnya: true berupa object
+      console.info(boolean.toString()); // outputnya: true berupa string
+      console.info(boolean.valueOf()); // outputnya: true berupa value
+
+      // Map
+
+      const map = new Map();
+      map.set('Nama', 'Robby');
+      map.set('Alamat', 'Bogor');
+
+      console.info(map); // outputnya: Object
+      console.info(map.get('Nama')); // outputnya: Robby
+      console.info(map.get('Alamat')); // outputnya: Bogor
+
+      for (const element of map) {
+        console.info(`${element[0]} : ${element[1]}`); // outputnya: Nama : Robby Alamat : Bogor
+      }
+    </script>
+  </body>
+</html>

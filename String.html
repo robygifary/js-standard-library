@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+  </head>
+  <body>
+    <script>
+      const name = 'Robby Tamara Gifary';
+
+      console.info(name.length); // outputnya: 19
+      console.info(name.toLowerCase()); // outputnya: robby tamara gifary
+      console.info(name.toUpperCase()); // outputnya: ROBBY TAMARA GIFARY
+      console.info(name.split(' ')); // outputnya: ["Robby", "Tamara", "Gifary"]
+      console.info(name); // outputnya: Robby Tamara Gifary
+
+      const input = '          input data          ';
+      console.info(input.trim()); // outputnya: input data
+
+      // spasinya tidak dihilangkan
+      console.info(input); // outputnya:           input data
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: 'Robby',
+        middleName: 'Tamara',
+        lastName: 'Gifary',
+        address: {
+          city: 'Bogor',
+          country: 'Indonesia',
+        },
+        hoby: ['Coding', 'Game', 'Traveling'],
+      };
+      const json = JSON.stringify([person]);
+      console.info(json); // outputnya: jsan berupa string
+
+      const jsonObject = JSON.parse(json);
+      console.log(jsonObject); // outputnya: json berupa object
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number</title>
+  </head>
+  <body>
+    <script>
+      const input = '12345';
+      const nomor = Number(input);
+
+      console.info(typeof input); // outputnya: string
+      console.info(typeof nomor); // outputnya: number
+      console.info(nomor); // outputnya: 12345
+
+      console.info(Number('salah')); // outputnya: NaN
+
+      console.info(Number.MIN_VALUE); // outputnya: 5e-324
+      console.info(Number.MAX_VALUE); // outputnya: 1.7976931348623157e+308
+      console.info(Number.MIN_SAFE_INTEGER); // outputnya: -9007199254740991
+      console.info(Number.MAX_SAFE_INTEGER); // outputnya: 9007199254740991
+      console.info(Number.NaN); // outputnya: NaN
+
+      const data = Number('Robby');
+      console.info(Number.isInteger(data)); // outputnya: false
+      console.info(Number.isNaN(data)); // outputnya: true
+
+      const value = Number('12345');
+      console.info(value.toString(2)); // outputnya: 11000000111001
+      console.info(value.toLocaleString('id-ID')); // outputnya: 12.345
+      console.info(value.toLocaleString('en-Us')); // outputnya: 12,345
+    </script>
+  </body>
+</html>

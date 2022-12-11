@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflect</title>
+  </head>
+  <body>
+    <script>
+      const person = {};
+
+      Reflect.set(person, 'firstName', 'Robby');
+      Reflect.set(person, 'lastName', 'Gifary');
+
+      console.info(person); // outputnya: {firstName: 'Robby', lastName: 'Gifary'}
+
+      console.info(Reflect.get(person, 'firstName')); // outputnya: Robby
+      console.info(Reflect.get(person, 'lastName')); // outputnya: Gifary
+
+      console.info(Reflect.has(person, 'firstName')); // outputnya: true
+      console.info(Reflect.has(person, 'middleName')); // outputnya: false
+      console.info(Reflect.has(person, 'lastName')); // outputnya: true
+    </script>
+  </body>
+</html>

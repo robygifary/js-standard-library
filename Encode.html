@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encode</title>
+  </head>
+  <body>
+    <script>
+      {
+        // encode uri dan decode uri
+
+        const url = 'http://conntoh.com/?name=Robby Tamara Gifary';
+        console.info(url); // outputnya: http://conntoh.com/?name=Robby Tamara Gifary
+
+        const encoded = encodeURI(url);
+        console.info(encoded); // outputnya: http://conntoh.com/?name=Robby%20Tamara%20Gifary
+
+        const decoded = decodeURI(encoded);
+        console.info(decoded); // outputnya: http://conntoh.com/?name=Robby Tamara Gifary
+      }
+
+      {
+        // encode uri dan decode uri
+
+        const value = 'Robby&Tamara=Gifary';
+        const url = 'http://contoh.com/?name=';
+        console.info(url + value); // outputnya: http://contoh.com/?name=Robby&Tamara=Gifary
+
+        const encoded = encodeURIComponent(value);
+        console.info(url + encoded); // outputnya: http://contoh.com/?name=Robby%26Tamara%3DGifary
+
+        const decoded = decodeURIComponent(encoded);
+        console.info(url + decoded); // outputnya: http://contoh.com/?name=Robby&Tamara=Gifary
+      }
+    </script>
+  </body>
+</html>
